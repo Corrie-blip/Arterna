@@ -24,6 +24,8 @@
     --topo-isl:       #4a3aa7;
     --tooltip-bg:     #0b0b0b;
     --tooltip-text:   #ffffff;
+    --callout-border: #eda100;
+    --callout-bg:     rgba(237,161,0,0.10);
   }
   @media (prefers-color-scheme: dark) {
     :root:where(:not([data-theme="light"])) {
@@ -44,6 +46,8 @@
       --topo-isl:       #9085e9;
       --tooltip-bg:     #fcfcfb;
       --tooltip-text:   #0b0b0b;
+      --callout-border: #c98500;
+      --callout-bg:     rgba(201,133,0,0.14);
     }
   }
   :root[data-theme="dark"] {
@@ -64,6 +68,8 @@
     --topo-isl:       #9085e9;
     --tooltip-bg:     #fcfcfb;
     --tooltip-text:   #0b0b0b;
+    --callout-border: #c98500;
+    --callout-bg:     rgba(201,133,0,0.14);
   }
 
   * { box-sizing: border-box; }
@@ -148,9 +154,12 @@
   .hero-text p.hero-implication {
     color: var(--text-secondary);
     font-size: 13.5px;
-    padding-top: 10px;
-    border-top: 1px solid var(--border);
+    margin-top: 12px;
     margin-bottom: 0;
+    padding: 12px 14px;
+    border: 1.5px solid var(--callout-border);
+    border-radius: 10px;
+    background: var(--callout-bg);
   }
 
   .card {
